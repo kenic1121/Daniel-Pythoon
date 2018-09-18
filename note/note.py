@@ -19,4 +19,7 @@ x = 2
 y = 6
 print (x*y)
 
-print ('enter a number-')
+print ((2 + 2) * 4)
+
+
+

@@ -28,4 +28,13 @@ def ran () :
 ran()
 
 
+def gradecity () :
+    grade = input ('What grade are you in?: ')
+    city = input ('What is your city?: ')
+
+    print (grade)
+    print (city)
+
+gradecity()
+
 

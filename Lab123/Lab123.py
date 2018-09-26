@@ -26,13 +26,12 @@ def gradeInSchool (mynumber) :
 
 
     elif mynumber == ('10') :
-        print ('You are a sophomore.')
-
+        return 'Sophmore'
     elif mynumber == ('11')   :
-        print ('You are a Junior.')
+        return 'Junior'
 
     elif mynumber == ('12')   :
-        print ('You are a senior.')
+        return 'Senior'
 
     else :
         print ('You arent in highschool')

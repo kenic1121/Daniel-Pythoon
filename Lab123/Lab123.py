@@ -1,24 +1,12 @@
 
 def main ():
     grade = input('What grade are you in?: ')
+
     letterGrade = gradeInSchool(grade)
+    listgrade = gradelist()
     print (letterGrade)
+    print (listgrade)
 
-
-def list () :
-    intro = input('Type anything to find your average grade: ')
-    gradelist = [86.5 , 75.3 , 98.9 , 100]
-    p = gradelist[0]
-    p1 = gradelist[1]
-    p2 = gradelist[2]
-    p3 = gradelist[3]
-    length = len(gradelist)
-    add = (p + p1 + p2 + p3)
-    print (intro)
-    print (add / length)
-
-#def lettergrade () :
-#    if
 
 def gradeInSchool (mynumber) :
     if mynumber == ('9')  :
@@ -34,7 +22,13 @@ def gradeInSchool (mynumber) :
         return 'Senior'
 
     else :
-        print ('You arent in highschool')
+        return 'You arent in high school.'
+
+def gradelist () :
+    lists = [67.8 , 89.9 ,99 , 100]
+    length = len(lists)
+    from 
+
 
 main()
 

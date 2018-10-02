@@ -3,9 +3,10 @@ def main ():
     grade = input('What grade are you in?: ')
 
     letterGrade = gradeInSchool(grade)
-    listgrade = gradelist()
+    grades = [67.8 , 89.9 ,99 , 100]
+    averagegrade = gradelist(grades)
     print (letterGrade)
-    print (listgrade)
+    
 
 
 def gradeInSchool (mynumber) :
@@ -24,10 +25,16 @@ def gradeInSchool (mynumber) :
     else :
         return 'You arent in high school.'
 
-def gradelist () :
-    lists = [67.8 , 89.9 ,99 , 100]
-    length = len(lists)
-    from 
+def gradelist (lists) :
+    answer = 0
+    print (lists)
+    print ('Your average GPA is: ')
+    answer =  (lists [0] + lists [1] + lists [2] + lists [3]) / len (lists)
+
+
+    print (answer)
+
+
 
 
 main()

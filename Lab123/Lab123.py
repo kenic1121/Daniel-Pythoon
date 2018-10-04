@@ -6,8 +6,10 @@ def main ():
     letterGrade = gradeInSchool(grade)
     grades = [67.8 , 89.9 ,99 , 100]
     averagegrade = gradelist(grades)
+    gpagrade = gpa (answer)
     print (letterGrade)
-    
+    print (averagegrade)
+    pring (gpagrade)
 
 
 def gradeInSchool (mynumber) :
@@ -31,9 +33,8 @@ def gradelist (lists) :
     print (lists)
     print ('Your average GPA is: ')
     answer =  (lists [0] + lists [1] + lists [2] + lists [3]) / len (lists)
+    return answer
 
-
-    print (answer)
 
 def gpa (answer) :
     if answer < int(90) :

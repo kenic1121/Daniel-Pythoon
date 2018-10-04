@@ -1,3 +1,4 @@
+#Lab 321
 
 def main ():
     grade = input('What grade are you in?: ')
@@ -34,10 +35,13 @@ def gradelist (lists) :
 
     print (answer)
 
+def gpa (answer) :
+    if answer < int(90) :
+        return 'You got an A.'
+    elif answer < int(80) :
+        return 'You got a B'
 
 
 
 main()
-
-
 

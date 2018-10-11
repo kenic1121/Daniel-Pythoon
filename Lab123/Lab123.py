@@ -5,12 +5,14 @@ def main ():
 
     letterGrade = gradeInSchool(grade)
     grades = [67.8 , 89.9 ,99 , 100]
-    averagegrade = gradelist(grades)
-    gpagrade = gpa (answer)
-    print (letterGrade)
-    print (averagegrade)
-    pring (gpagrade)
-
+    answer = 0
+    averagegrades = gradelist(grades)
+    fail = passfail(answer)
+    print (grades)
+    print ('Your average GPA is:', averagegrades)
+    print (lettergrade(averagegrades))
+    print (gradeInSchool(grade))
+    print (passfail(fail))
 
 def gradeInSchool (mynumber) :
     if mynumber == ('9')  :
@@ -29,20 +31,25 @@ def gradeInSchool (mynumber) :
         return 'You arent in high school.'
 
 def gradelist (lists) :
-    answer = 0
-    print (lists)
-    print ('Your average GPA is: ')
     answer =  (lists [0] + lists [1] + lists [2] + lists [3]) / len (lists)
     return answer
 
 
-def gpa (answer) :
-    if answer < int(90) :
+def lettergrade (answer) :
+    if answer < 90 :
         return 'You got an A.'
-    elif answer < int(80) :
+    elif answer < 80 :
         return 'You got a B'
+    elif answer < 70 :
+        return 'You got a C'
+    elif answer < 60 :
+        return 'You got a D'
+    else :
+        return 'you failed'
 
-
+def passfail (fail) :
+    if fail < 90 :
+        return 'pass'
 
 main()
 

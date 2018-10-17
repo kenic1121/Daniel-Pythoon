@@ -4,15 +4,21 @@ def main ():
     grade = input('What grade are you in?: ')
 
     letterGrade = gradeInSchool(grade)
-    grades = [67.8 , 89.9 ,99 , 100]
+    grades = [67.8 , 90.69 ,99 , 60]
     answer = 0
     averagegrades = gradelist(grades)
     fail = passfail(answer)
-    print (grades)
-    print ('Your average GPA is:', averagegrades)
-    print (lettergrade(averagegrades))
+    input('Pause')
     print (gradeInSchool(grade))
-    print (passfail(fail))
+    input('Pause')
+    print (grades)
+    input ('Pause')
+    print ('Your average GPA is:', averagegrades)
+    input ('pause')
+    print (lettergrade(averagegrades))
+    input('pause')
+    print (passfail(averagegrades))
+    input('pause')
 
 def gradeInSchool (mynumber) :
     if mynumber == ('9')  :
@@ -48,8 +54,10 @@ def lettergrade (answer) :
         return 'you failed'
 
 def passfail (fail) :
-    if fail < 90 :
+    if fail <= 90 :
         return 'pass'
+    elif fail <= 80 :
+        return 'Barely passing'
 
 main()
 

@@ -37,8 +37,17 @@ def gradeInSchool (mynumber) :
         return 'You arent in high school.'
 
 def gradelist (lists) :
-    answer =  (lists [0] + lists [1] + lists [2] + lists [3]) / len (lists)
-    return answer
+    sum = 0
+    for i in range( len(lists)):
+        sum += lists[i]
+    return sum / len(lists)
+
+
+
+
+
+ #   answer =  (lists [0] + lists [1] + lists [2] + lists [3]) / len (lists)
+  #  return answer
 
 
 def lettergrade (answer) :

@@ -2,9 +2,14 @@
 
 def main ():
     grade = input('What grade are you in?: ')
+    numclasses = input('How many classes are you in?: ')
 
     letterGrade = gradeInSchool(grade)
-    grades = [67.8 , 90.69 ,99 , 60]
+    grades = []
+    for u in range (1, int(numclasses)):
+        grade = input('What is your grade?:')
+        grades.append(int(grade))
+    print (grades)
     answer = 0
     averagegrades = gradelist(grades)
     fail = passfail(answer)

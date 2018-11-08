@@ -1,8 +1,10 @@
 import random
 
 def main () :
-    setOfDice=[0] * 6
-    #setOfDice = definedice()
+   # setOfDice=[0] * 6
+ #   for die in range (0,6) :
+ #       setOfDice[die] = definedice(die)
+  #  print(setOfDice)
 
     play = 'y'
     game = 0
@@ -12,11 +14,13 @@ def main () :
         for i in range (0,22) :
             print ('_', end='')
         print()
-        roll = rollDice()
+        roll1 = rollDice()
+        roll2 = rollDice()
+        definedice(roll1,roll2)
 
 
-        dieroll = definedice(roll)
-        printMyDie(dieroll)
+     #   dieroll = definedice(roll)
+       # printMyDie(dieroll)
       #  printDiceSideBySide(mydice)
 
         game += 1
@@ -28,7 +32,7 @@ def main () :
 
 
 
-def definedice (myRoll) :
+def definedice (myRoll1 ,myRoll2) :
     dice = [0] * 6
     topbot = ' ------- '
     blank =  '|       |'
@@ -47,13 +51,14 @@ def definedice (myRoll) :
         elif num == 3:
             dice[num]= [topbot,twoDot,blank,twoDot,topbot]
         elif num == 4:
-            dice[num]= [topbot,twoDot,oneDotR,twoDot,topbot]
+            dice[num]= [topbot,twoDot,oneDotM,twoDot,topbot]
         else:
             dice[num]= [topbot,twoDot,twoDot,twoDot,topbot]
-    return dice[myRoll]
+    for row in range (0,5):
+        print (dice[myRoll1][row],dice[myRoll2][row])
+
 
 def rollDice() :
-    print ('roll dice')
     diceNum = random.randint(0 , 5)
     return diceNum
 

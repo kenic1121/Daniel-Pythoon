@@ -80,15 +80,14 @@ white_color = (1.0, 1.0, 1.0)
 red_color = (1.0, 0.0, 0.0)
 green_color = (0.0, 1.0, 0.0)
 blue_color = (0.0, 0.0, 1.0)
-hex_color = "#ffe063"
+hex_color = "#db580d"
 
-#############turtle.bgcolor("green")
+turtle.bgcolor("green")
 #turtle.bgpic("tenor.gif")
-turtle.register_shape (“name_of_file.gif”)
 
 # Use like so:
-pen.pencolor(blue_color)
-mystery_drawing_one(91)
+pen.pencolor(hex_color)
+mystery_drawing_one(45)
 
 # Note that Turtle doesn't really have a 'color' object.  You would
 # create and store colors as I did above - with a tuple of 3 integers

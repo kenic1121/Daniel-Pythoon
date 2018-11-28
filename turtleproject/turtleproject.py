@@ -1,11 +1,14 @@
 import turtle
 
-t=turtle.Pen()
+def main () :
+    t = turtle.Pen()
+    turtle.bgcolor('green')
 
-#turtle.bgpic('ok2.gif')
-turtle.bgcolor('green')
-
-
+    lineT()
+    square()
+    circle()
+    triangle()
+    turtle.exitonclick()
 
 
 #Move the pen
@@ -13,6 +16,7 @@ def moveT (x , y) :
     turtle.penup()
     turtle.setpos(x,y)
     turtle.pendown()
+
 
 def lineT () :
     moveT(-50 , 0)
@@ -47,8 +51,4 @@ def triangle () :
     turtle.left(120)
     turtle.forward(400)
 
-lineT()
-square()
-circle()
-triangle()
-turtle.exitonclick()
+main()

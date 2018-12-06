@@ -1,47 +1,38 @@
 TextCodes = {'think' : 'have a particular opinion, belief, or idea about someone or something.', 'ear' : 'the organ of hearing and balance in humans and other vertebrates' , 'fly' : ' move through the air under control.' }
 
 
-#prints the deffinition
-#print (TextCodes['think'])
 
-search = input('Would you like to search or change a word in the dictionary?    ')
 
-if search == 'search' :
-        wordfind = input('What word do you want the deffinition of?    ')
-        wordfinding()
 
-elif search == 'change' :
+def checker () :
+    yes = 'true'
+    while yes == "true":
+        answer = input("Name a text code - ")
+
+        if answer == 'main' :
+            main()
+
+    word = input('What work would you like to check?   ')
+    TextCodes[word]
+
+def changer () :
+    yes = 'true'
+    while yes == 'true':
         input('What word would you like to change?  ')
-else :
-    print('Exiting')
 
 
 
+def main () :
+    cdc = input('Would you like to change, delete, or look at (check) a word?   ')
 
-def wordfinding () :
+    if cdc == 'check' :
+        checker(TextCodes)
 
+#    elif cdc == 'change' :
+ #       changer (TextCodes)
 
-    if wordfind == 'think' :
-        print(TextCodes['think'])
-
-    elif wordfind == 'ear' :
-        print(TextCodes['ear'])
-
-    elif wordfind == 'fly' :
-        print(TextCodes['fly'])
-
-    else :
-        newword = input('Is this a new word?  ')
+  #  elif cdc == 'delete' :
+   #    deleter (TextCodes)
 
 
-
-
-    if newword == 'yes' :
-        deffinition = input('What is the deffinition of your word?')
-        TextCodes[wordfind] = deffinition
-    elif newword == 'no' :
-        input('click any key to exit')
-    else:
-        print('error')
-
-
+main(TextCodes)

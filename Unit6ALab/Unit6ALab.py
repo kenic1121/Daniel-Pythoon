@@ -4,35 +4,107 @@ TextCodes = {'think' : 'have a particular opinion, belief, or idea about someone
 
 
 
-def checker () :
-    yes = 'true'
+
+def check(TextCodes):
+    yes = "true"
+
     while yes == "true":
-        answer = input("Name a text code - ")
 
-        if answer == 'main' :
-            main()
-
-    word = input('What work would you like to check?   ')
-    TextCodes[word]
-
-def changer () :
-    yes = 'true'
-    while yes == 'true':
-        input('What word would you like to change?  ')
+        ans = input("Name a word :   ")
 
 
+        if ans == "menu":
+            main(TextCodes)
+            return
 
-def main () :
-    cdc = input('Would you like to change, delete, or look at (check) a word?   ')
 
-    if cdc == 'check' :
-        checker(TextCodes)
+        if ans in TextCodes:
+            print(TextCodes[ans])
 
-#    elif cdc == 'change' :
- #       changer (TextCodes)
 
-  #  elif cdc == 'delete' :
-   #    deleter (TextCodes)
+        else:
+            define = input("What does that mean?")
+            if define == "menu":
+                main(TextCodes)
+                return
+
+            TextCodes[ans] = define
+
+def change(TextCodes):
+    go = "true"
+
+    while go == "true":
+
+        print("What word will be changed?: ")
+        print(TextCodes)
+
+
+        key = input("")
+
+
+        if key == "menu":
+                main(TextCodes)
+                return
+
+
+        if key in TextCodes:
+            text = input("What change will you make?:  ")
+            if text == "menu":
+                    main(TextCodes)
+                    return
+
+
+            TextCodes[key] = text
+
+
+        else:
+            print("Word not found.")
+
+def delete(TextCodes):
+    go = "true"
+
+    while go == "true":
+        print("What would you like to delete?: ")
+        print(TextCodes)
+
+
+        ans = input("")
+
+
+        if ans == "menu":
+            main(TextCodes)
+            return
+
+
+        if ans in TextCodes:
+            deleted = TextCodes.pop(ans)
+            print(TextCodes)
+            print("Finished")
+
+
+        else:
+            print("Word not found, try again")
+
+
+
+def main(textCodes):
+    wordDecision = input("Would you like to -change -check -delete a word: ")
+
+    print("Type menu to go back to the menu")
+
+    if wordDecision == "check":
+
+        check(textCodes)
+
+    if wordDecision == "change":
+
+        change(textCodes)
+
+    if wordDecision == "delete":
+
+        delete(textCodes)
+
+
 
 
 main(TextCodes)

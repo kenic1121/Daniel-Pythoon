@@ -1,56 +1,57 @@
-def pets () :
-
-
-    myPet1 = petClass("Dog","John","Boxer")
-    print(myPet1.pname)
-    print(myPet1.ptype)
-    myPet1.whatIsIt()
-
-
-
-    myPet2 = petClass("Cat","Charles","Calico")
-    print(myPet2.pname)
-    print(myPet2.ptype)
-    myPet2.whatIsIt()
-
-
-    myCage1 = cageClass("crocodile","True")
-    print(myCage1.cType)
-    print(myCage1.ptype)
-    myCage1.whatDanger()
-
-
-
-    myCage2 = cageClass("mouse","False")
-    print(myCage2.cType)
-    print(myCage2.petType)
-    myCage2.whatDanger()
-
-
-
-
-
 class petClass () :
     type = 'cage free pet'
-    def __init__ (self, type , name , breed) :
+    def whatIsIt (self) :
+        print(self.ptype, self.pname, self.pbreed, self.cagefreepet)
+    def __init__ (self, type , name , breed , CFP) :
         self.ptype = type
         self.pname = name
         self.pbreed = breed
-
-    def WhatItIs (self) :
-        print(self.ptype, self.pname, self.pbreed)
-
+        self.cagefreepet = CFP
 
 class cageClass () :
     type = 'caged pet'
-
-    def __init__ (self , type, danger):
-         self.ctype = type
-         self.cdanger = danger
     def WhatDanger (self) :
         if self.cdanger == 'true' :
             print ('DANGEROUS')
         if self.cdanger == 'false' :
             print ('Not Dangerous')
+
+    def __init__ (self , type, danger):
+         self.cType = type
+         self.cdanger = danger
+
+
+def pets () :
+    myPet1 = petClass("Dog","John","Boxer","Cage Free Pet")
+    print(myPet1.pname)
+    print(myPet1.ptype)
+    print(myPet1.cagefreepet)
+    myPet1.whatIsIt()
+
+    input('Pause')
+
+    myPet2 = petClass("Cat","Charles","Calico","Cage Free Pet")
+    print(myPet2.pname)
+    print(myPet2.ptype)
+    print(myPet1.cagefreepet)
+    myPet2.whatIsIt()
+
+    input('pause')
+
+    myCage1 = cageClass("snake","true")
+    print(myCage1.cType)
+    myCage1.WhatDanger()
+
+    input('pause')
+
+    myCage2 = cageClass("rat","false")
+    print(myCage2.cType)
+    myCage2.WhatDanger()
+
+
+
+
+
+
 
 pets()
